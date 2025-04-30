@@ -12,7 +12,7 @@ private:
   unsigned int m_remaining;
   bool m_locked;
 
-  unsigned int distance(string guess);
+  //unsigned int distance(string guess);
 
 public:
 
@@ -21,5 +21,6 @@ public:
   bool match(string guess);
 
   unsigned int remaining();
+  unsigned int distance(string guess);
 };
 #endif

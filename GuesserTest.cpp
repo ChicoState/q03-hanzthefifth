@@ -20,3 +20,14 @@ TEST(GuesserTest, smoke_test)
   Guesser object("Secret");
   ASSERT_EQ( 1+1, 2 );
 }
+
+
+TEST(GuesserTest, same_strings){
+  Guesser g("match");
+  ASSERT_EQ(g.distance("match"), 0);
+}
+
+TEST(GuesserTest, one_letter_off){
+  Guesser g("same");
+  ASSERT_EQ(g.distance("samee"), 1);
+}
