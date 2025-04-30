@@ -31,3 +31,9 @@ TEST(GuesserTest, one_letter_off){
   Guesser g("same");
   ASSERT_EQ(g.distance("samee"), 1);
 }
+
+
+TEST(GuesserTest, bad_guess) {
+  Guesser g("abc");
+  ASSERT_FALSE(g.match("xyz"));
+}
